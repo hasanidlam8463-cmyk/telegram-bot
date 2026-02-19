@@ -990,4 +990,23 @@ def save_st(m, item):
     else: bot.reply_to(m, "⚠️ সঠিক ফরম্যাট দিন।", reply_markup=admin_keyboard())
 
 print("Bot Started with Excel Upload & Binance USD Conversion...")
-bot.infinity_polling()
+bot.infinity_polling)
+from flask import Flask
+import threading
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running!"
+
+def run():
+    app.run(host="0.0.0.0", port=10000)
+
+def bot_thread():
+    bot.infinity_polling()
+
+threading.Thread(target=bot_thread).start()
+
+if __name__ == "__main__":
+    run()
